@@ -13,19 +13,9 @@ const NavBar = () => {
         <nav className={styles.navBar}>
             <div className={styles.logoIcon}>
                 <Link href="/">
-                    <FaCode/>
+                    <FaCode size={32} />
                 </Link>
             </div>
-            {/*<div className={styles.btnContainer}>*/}
-            {/*    <button*/}
-            {/*        onClick={() => setIsMenuOpen(!isMenuOpen)}*/}
-            {/*        className={styles.hamburgerBtn}*/}
-            {/*    >*/}
-            {/*        <span className={isMenuOpen ? styles.barOpen : styles.bar}></span>*/}
-            {/*        <span className={isMenuOpen ? styles.barOpen : styles.bar}></span>*/}
-            {/*        <span className={isMenuOpen ? styles.barOpen : styles.bar}></span>*/}
-            {/*    </button>*/}
-            {/*</div>*/}
            <div className={`${styles.menuContainer} ${isMenuOpen? styles.showMenu:""}`}>
                <Link href="/">
                    Home
