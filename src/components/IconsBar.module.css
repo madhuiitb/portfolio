@@ -1,0 +1,33 @@
+.iconsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.iconsContainer a{
+    text-decoration: none;
+    height: 32px;
+    width: 32px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+i.iconsContainer a:hover{
+    background-color: red;
+}
+
+.text{
+    writing-mode: vertical-rl ;
+    text-orientation: upright;
+}
+
+.arrow{
+    /*background-color: #13a308;*/
+    color: #34e834;
+}

@@ -1,0 +1,63 @@
+.navBar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    min-height: 10vh;
+    width: 100%;
+    background-color: red;
+    padding: 0 16px;
+    z-index: 1000;
+}
+
+.btnContainer{
+    display: flex;
+}
+
+.hamburgerBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 28px;
+    width: 32px;
+}
+.bar{
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 8px;
+}
+.menuContainer a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media(min-width:768px){
+
+    .menuContainer{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .menuContainer a{
+        font-size: 24px;
+    }
+
+    .menuContainer a:hover{
+        text-decoration: underline;
+        /*color: #220101;*/
+    }
+
+}

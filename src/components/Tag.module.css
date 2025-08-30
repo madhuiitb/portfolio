@@ -1,0 +1,19 @@
+.tag{
+    display: flex;
+    width: 70%;
+    min-height: 32px;
+    border: 2px solid white;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    padding: 8px;
+    background-color: #074c02;
+    font-weight: bold;
+}
+
+.tag:hover{
+    background-color: red;
+
+}
+
