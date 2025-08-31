@@ -3,7 +3,10 @@
     --color-foreground: #f8f6f6;
     --color-primary: #2563eb; /* blue-600 */
     --color-secondary: #6b7280; /* gray-500 */
-    --color-border: #e5e7eb; /* gray-200 */
+    --color-border: #ea05ea; /* gray-200 */
+
+    --color-text: #0e9504;
+    --color-tagline: #edbf07;
 }
 
 /* Dark theme */
@@ -12,7 +15,10 @@
     --color-foreground: #f1f5f9; /* slate-100 */
     --color-primary: #3b82f6; /* blue-500 */
     --color-secondary: #94a3b8; /* slate-400 */
-    --color-border: #334155; /* slate-700 */
+    --color-border: #d005e3; /* slate-700 */
+
+    --color-text: #ffffff;
+    --color-tagline: #1403c6;
 }
 
 html,

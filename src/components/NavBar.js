@@ -20,7 +20,7 @@ const NavBar = () => {
                <Link href="/">
                    Home
                </Link>
-               <Link href="/about-me">
+               <Link href="/about">
                    About
                </Link>
                <Link href="/algorithms-with-js">

@@ -14,6 +14,18 @@ export const ICONS = {
     SiSupabase
 };
 
+
+export const SKILLS = [
+    { name: "React.js", years: 6, percent: 95 },
+    { name: "Next.js", years: 2, percent: 70 },
+    { name: "React Native", years: 1, percent: 55 },
+    { name: "JavaScript", years: 6, percent: 90 },
+    { name: "Typescript", years: 1, percent: 20 },
+    { name: "CSS / HTML", years: 6, percent: 90 },
+    { name: "Node.js", years: 1, percent: 35 },
+    { name: "REST API", years: 4, percent: 70 },
+];
+
 export const PROJECT_DETAILS=[
         {
             "title": "Mini-Ecommers in Next.js",

@@ -1,4 +1,4 @@
-import Image from "next/image";
+'use client';
 import styles from "./page.module.css";
 import Card from "@/components/Card";
 import IconsBar from "@/components/IconsBar";
