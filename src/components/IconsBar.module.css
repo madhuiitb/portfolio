@@ -18,8 +18,10 @@
     border-radius: 8px;
 }
 
-i.iconsContainer a:hover{
-    background-color: red;
+.iconsContainer a:hover{
+    color: var(--color-border);
+    background-color: var(--color-hover);
+    transform: scale(1.4);
 }
 
 .text{
