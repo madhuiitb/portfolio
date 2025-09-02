@@ -7,6 +7,7 @@
 
 .sideBar{
     display: none;
+    color: var(--color-primary);
 }
 .main {
     flex: 1;

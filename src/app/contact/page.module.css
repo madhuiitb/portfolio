@@ -11,6 +11,7 @@
     margin-right: 16px;
     gap: 4rem;
     min-width: 40%;
+    color: var(--color-text);
 }
 
 .formRow{
@@ -20,7 +21,6 @@
     justify-content: space-around;
     gap: 2rem;
     width: 100%;
-    box-shadow: 0 8px 8px 0 rgb(18, 175, 6), 0 6px 16px 0 rgba(221, 6, 6, 0.19);
     transition: box-shadow 0.2s;
 }
 

@@ -11,7 +11,7 @@
     text-decoration: none;
     height: 32px;
     width: 32px;
-    border: 1px solid white;
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +28,5 @@ i.iconsContainer a:hover{
 }
 
 .arrow{
-    /*background-color: #13a308;*/
-    color: #34e834;
+    color: var(--color-primary);
 }

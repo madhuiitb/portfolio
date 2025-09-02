@@ -8,9 +8,10 @@
     height: auto;
     min-height: 10vh;
     width: 100%;
-    background-color: red;
+    background-color: var(--color-header);
     padding: 0 16px;
     z-index: 1000;
+    color: var(--color-secondary);
 }
 
 .btnContainer{
