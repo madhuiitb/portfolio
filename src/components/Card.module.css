@@ -8,13 +8,13 @@
     padding: 1rem;
     color: var(--color-text);
     border-radius: 16px;
-    box-shadow: 0 8px 8px 0 var( --color-border);
+    box-shadow: 0 4px 8px 0 var(--color-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
     background-color: var( --color-border );
     color: var(--color-text);
-    box-shadow: 0 8px 8px 0 var( --color-border), 0 6px 20px 0 rgb(82, 108, 237);
+    box-shadow: 0 8px 8px 0 var(--color-shadow), 0 4px 8px 0 rgb(82, 108, 237);
     transition: box-shadow 0.3s ease;
     transform: scale(1.1);
 }
@@ -49,13 +49,11 @@
 }
 
 .tags{
-    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .borderLine{
@@ -79,4 +77,10 @@
 
 .links a:hover{
    color: var(--color-primary);
+}
+
+@media (min-width: 768px){
+    .tags{
+        /*gap: 1rem;*/
+    }
 }

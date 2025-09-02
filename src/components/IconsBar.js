@@ -14,13 +14,13 @@ const IconsBar = () => {
                 <FaArrowDownLong  />
             </div>
             <Link href="https://x.com/madhubabu_iitb" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter />
+                <FaXTwitter  size={20}/>
             </Link>
             <Link href="https://www.youtube.com/@madhuiitb-cse" target="_blank" rel="noopener noreferrer">
-                <FaYoutube />
+                <FaYoutube  size={20} />
             </Link>
             <Link href="https://github.com/madhuiitb/" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
+                <FaGithub   size={20}/>
             </Link>
         </nav>
     )

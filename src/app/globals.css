@@ -5,11 +5,15 @@
     --color-secondary: #64666a; /* gray-500 */
     --color-border: #f8f6f6; /* gray-200 */
 
+
     --color-text: #606061;
     --color-tagline: #edbf07;
     --color-header: #e8e6e6;
     --color-title: #28386c;
     --color-hover: #1e398e;
+    --color-shadow: #0a0a0b;
+
+    --text-header: #0c0c0c;
 }
 
 /* Dark theme */

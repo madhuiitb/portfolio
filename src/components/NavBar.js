@@ -13,7 +13,7 @@ const NavBar = () => {
         <nav className={styles.navBar}>
             <div className={styles.logoIcon}>
                 <Link href="/">
-                    <FaCode size={32} />
+                    <FaCode size={28} />
                 </Link>
             </div>
            <div className={`${styles.menuContainer} ${isMenuOpen? styles.showMenu:""}`}>
