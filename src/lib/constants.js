@@ -42,6 +42,22 @@ export const PROJECT_DETAILS=[
                 "demo": "https://nextjs-mini-ecommers.vercel.app/"
             }
         },
+
+     {
+            "title": "Typeahead Search with Filters",
+            "description": [
+                "A fast, polished React demo that combines typeahead (autocomplete) search with realtime filters, smooth animations, skeleton loaders, and thoughtful UI states."
+            ],
+            "tags": [
+                { "name": "JavaScript", "icon": "FaSquareJs" },
+                { "name": "React", "icon": "FaReact" },
+                { "name": "CSS Modules", "icon": "FaGithub" }
+            ],
+            "links": {
+                "github": "https://github.com/madhuiitb/typeahead-with-filters",
+                "demo": "https://typeahead-with-filters.vercel.app/"
+            }
+        },
         {
             "title": "Dynamic Form Builder",
             "description": [
