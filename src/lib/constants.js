@@ -75,7 +75,7 @@ export const PROJECT_DETAILS=[
             }
         },
         {
-            "title": "E-commerce Dashboard",
+            "title": "School Dashboard",
             "description": [
                 "Built a responsive dashboard with product search, filter, and sort functionality.",
                 "Added persistent cart, dark/light mode toggle, and skeleton loaders for better UX."
