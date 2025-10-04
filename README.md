@@ -1,62 +1,82 @@
-# 🔍 Typeahead Search with Filters
-
-A fast, polished React demo that combines **typeahead (autocomplete) search** with **realtime filters**, smooth animations, skeleton loaders, and thoughtful UI states.  
-Inspired by the [Search Results Animation on Dribbble](https://dribbble.com/shots/17399694-Search-Results-Animation).
-
 ---
+# Portfolio Website
+
+A sleek and responsive portfolio website built with **React** and **Vite**. This project showcases my skills, projects, and provides a platform for potential clients and employers to learn more about my work.
 
 ## 🚀 Live Demo
-👉 [View on Vercel](https://typeahead-with-filters.vercel.app/)
 
-## 📂 Source Code
-👉 [GitHub Repository](https://github.com/madhuiitb/typeahead-with-filters)
+You can view the live version of the portfolio here:
 
----
+👉 [https://madhu-portfolio-lemon.vercel.app/](https://madhu-portfolio-lemon.vercel.app/)
 
-## ✨ Features
+## 🧰 Technologies Used
 
-- ⚡ **Instant Typeahead** – autocomplete results update as you type  
-- 🎚 **Filters & Toggles** – refine search results in real-time  
-- ⏳ **Loaders & Skeletons** – improve perceived performance during loading  
-- ❌ **Custom Error Page** – graceful fallback for 404s or failures  
-- 🗂 **Active Tab Indication** – clear context of current selection  
-- 🪟 **Modal Component** – for additional actions and details  
-- 🎨 **Transformations, Animations & Keyframes** – smooth micro-interactions  
-- 🧩 **Scoped Styling with CSS Modules** – maintainable, modular CSS  
-- 🔔 **React Icons** – clean, lightweight iconography  
+- **React and Next.js**: JavaScript library for building user interfaces.
+- **webpack**: Next-generation, fast build tool.
+- **CSS Modules**: Scoped and modular CSS for styling.
+- **React Router**: For navigation between different sections.
+- **React Icons**: For scalable vector icons.
+- **d3.js**: For bar chart to represent skill set.
 
----
+## 📂 Project Structure
 
-## 🛠 Tech Stack
-
-- [React](https://react.dev/)  
-- [CSS Modules](https://github.com/css-modules/css-modules)  
-- [React Icons](https://react-icons.github.io/react-icons/)  
-- [Vercel](https://vercel.com/) for deployment  
-
----
-
-## 📸 Preview
-
-(You can add a screenshot or GIF here of the app in action.)
-
----
-
-## ⚡ Getting Started
-
-Clone the repo and install dependencies:
-
-```bash
-git clone https://github.com/madhuiitb/typeahead-with-filters.git
-cd typeahead-with-filters
-yarn install   # or npm install
 ```
-## 📖 Learnings
-- Improved skills in managing stateful UI components like filters, toggles, and modals
-- Gained experience handling loading, error, and empty states for better UX
-- Practiced CSS animations, keyframes, and transformations for smooth transitions
-- Explored the balance between performance and design polish in real-world UIs
 
-## 📜 License
+portfolio/
+├── public/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ProjectCard.jsx
+│   │   └── ContactForm.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+│       ├── global.css
+│       └── theme.css
+├── .gitignore
+├── package.json
+└── README.md
 
-- This project is open source and available under the MIT License
+````
+
+## ⚙️ Setup & Installation
+
+To run this project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/madhuiitb/portfolio.git
+   cd portfolio
+````
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   The application will be available at [http://localhost:3000](http://localhost:3000).
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
