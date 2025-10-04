@@ -27,6 +27,21 @@ export const SKILLS = [
 ];
 
 export const PROJECT_DETAILS=[
+    {
+            "title": "Mini Kanban Boards",
+            "description": [
+                "Built a responsive Mini Kanban Board using React and Vite. Implemented add, edit, delete, and drag-and-drop tasks across lists with modal forms and unique task IDs. Deployed live on Vercel."
+            ],
+            "tags": [
+                { "name": "JavaScript", "icon": "FaSquareJs" },
+                { "name": "React", "icon": "FaReact" },
+                { "name": "CSS", "icon": "FaCss3Alt" }
+            ],
+            "links": {
+                "github": "https://github.com/madhuiitb/mini-kanban-boards",
+                "demo": "https://mini-kanban-boards.vercel.app/"
+            }
+        },
         {
             "title": "Mini-Ecommers in Next.js",
             "description": [
