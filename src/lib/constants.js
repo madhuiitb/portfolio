@@ -28,6 +28,23 @@ export const SKILLS = [
 
 export const PROJECT_DETAILS=[
     {
+    "title": "High-Concurrency Seat Booking Simulator",
+    "description": [
+        "Built a seat booking simulation using Next.js App Router that models real-world ticket reservation workflows with temporary seat locking, conflict detection handling, and polling-based availability synchronization. Implemented reducer-driven state management, optimistic UI updates, and checkout confirmation flow. Deployed live on Vercel."
+    ],
+    "tags": [
+        { "name": "TypeScript", "icon": "SiTypescript" },
+        { "name": "Next.js", "icon": "SiNextdotjs" },
+        { "name": "React", "icon": "FaReact" },
+        { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+        { "name": "React Query", "icon": "SiReactquery" }
+    ],
+    "links": {
+        "github": "https://github.com/madhuiitb/high-concurrency-seat-booking",
+        "demo": "https://high-concurrency-seat-booking.vercel.app/seat-map"
+    }
+},
+    {
             "title": "Mini Kanban Boards",
             "description": [
                 "Built a responsive Mini Kanban Board using React and Vite. Implemented add, edit, delete, and drag-and-drop tasks across lists with modal forms and unique task IDs. Deployed live on Vercel."
