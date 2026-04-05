@@ -30,14 +30,13 @@ export const PROJECT_DETAILS=[
     {
     "title": "High-Concurrency Seat Booking Simulator",
     "description": [
-        "Built a seat booking simulation using Next.js App Router that models real-world ticket reservation workflows with temporary seat locking, conflict detection handling, and polling-based availability synchronization. Implemented reducer-driven state management, optimistic UI updates, and checkout confirmation flow. Deployed live on Vercel."
+        "Built a seat booking simulator using Next.js with temporary seat locking, conflict detection handling, and polling-based availability sync. Implemented reducer-based state management and checkout confirmation flow. Deployed on Vercel."
     ],
     "tags": [
-        { "name": "TypeScript", "icon": "SiTypescript" },
         { "name": "Next.js", "icon": "SiNextdotjs" },
         { "name": "React", "icon": "FaReact" },
-        { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-        { "name": "React Query", "icon": "SiReactquery" }
+        { "name": "TypeScript", "icon": "SiTypescript" },
+        { "name": "Tailwind", "icon": "SiTailwindcss" }
     ],
     "links": {
         "github": "https://github.com/madhuiitb/high-concurrency-seat-booking",
