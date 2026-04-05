@@ -30,7 +30,7 @@ export const PROJECT_DETAILS=[
     {
     "title": "High-Concurrency Seat Booking Simulator",
     "description": [
-        "Built a seat booking simulator using Next.js with temporary seat locking, conflict detection handling, and polling-based availability sync. Implemented reducer-based state management and checkout confirmation flow. Deployed on Vercel."
+        "Built a seat booking simulator using Next.js with temporary seat locking, conflict detection handling, and polling-based availability sync. Deployed on Vercel."
     ],
     "tags": [
         { "name": "Next.js", "icon": "SiNextdotjs" },
