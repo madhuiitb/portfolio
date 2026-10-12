@@ -1,32 +1,43 @@
 .page {
-  margin-top: 25vh;
-    display: flex;
-    flex-direction: row;
-    padding: 16px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #090d16;
+  color: #f8fafc;
+  padding-top: 100px;
 }
 
-.sideBar{
-    display: none;
-    color: var(--color-primary);
-}
 .main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.footer {
-  grid-row-start: 3;
   display: flex;
-  gap: 24px;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 20px 24px 40px 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-@media (min-width: 768px) {
-    .sideBar{
-        display: block;
-        margin-left: 2rem;
-        width: 64px;
-    }
+/* Custom horizontal scrollbar */
+.main::-webkit-scrollbar {
+  height: 6px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 9999px;
+}
+
+.sideBar {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 40;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 10px;
+  border-radius: 9999px;
 }
