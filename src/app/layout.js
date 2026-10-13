@@ -13,16 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Madhu's portfolio",
-  description: "My portfolio about my frontend developer experience.",
+  title: "Madhu | Frontend & Systems Engineer",
+  description: "Portfolio featuring high-concurrency systems, UI components, and frontend architecture.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <NavBar />
-      <main>{children}</main>
+    <html lang="en" className="dark">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#090d16] text-slate-100 flex flex-col justify-between selection:bg-indigo-500 selection:text-white`}
+      >
+        {/* Subtle Ambient Background Gradient */}
+        <div className="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px] opacity-40 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+
+        <NavBar />
+        
+        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {children}
+        </main>
       </body>
     </html>
   );
