@@ -1,65 +1,81 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
-export default function Card({ title, description, tags, links }) {
+export default function Card({ title, description, tags, links, isFeatured, torchBrightness = 1, torchSize = 400, isTorchOn = true }) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  const descString = typeof description === 'string' ? description : String(description || '');
+
   return (
     <motion.div
-      whileHover={{ y: -6 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      style={{
-        width: '340px',
-        minWidth: '340px',
-        borderRadius: '16px',
-        backgroundColor: 'rgba(15, 23, 42, 0.75)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        backdropFilter: 'blur(12px)',
-        padding: '24px',
-        display: 'flex',
-        flexDirection: 'column',
-        justify: 'space-between',
-        boxShadow: '0 10px 30px -10px rgba(0,0,0,0.5)',
-      }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      whileHover={{ y: -6, scale: isFeatured ? 1.02 : 1 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 22 }}
+      className={`relative overflow-hidden w-[330px] sm:w-[370px] min-h-[310px] rounded-2xl bg-black/95 backdrop-blur-xl border transition-colors duration-300 p-6 flex flex-col justify-between cursor-pointer ${
+        isFeatured 
+          ? 'border-cyan-500/50 shadow-[0_20px_50px_rgba(34,211,238,0.18)]' 
+          : 'border-white/15'
+      }`}
     >
-      <div>
-        {/* Header Icon & Title */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '12px' }}>
-          <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#f8fafc', margin: 0, lineHeight: 1.3 }}>
+      {/* Upgraded Cyberpunk Cyan/Indigo Surface Glow matching black aesthetic */}
+      {isTorchOn && isHovered && (
+        <div
+          className="pointer-events-none absolute -inset-px transition-opacity duration-200 rounded-2xl z-0"
+          style={{
+            background: `radial-gradient(${torchSize}px circle at ${position.x}px ${position.y}px, rgba(34, 211, 238, ${0.28 * torchBrightness}), rgba(99, 102, 241, ${0.15 * torchBrightness}) 45%, transparent 80%)`,
+          }}
+        />
+      )}
+
+      <div className="relative z-10">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <h3 className="text-base font-semibold text-slate-100 tracking-tight leading-snug">
             {title}
           </h3>
-          <div style={{ padding: '6px', borderRadius: '8px', backgroundColor: 'rgba(34,211,238,0.1)', border: '1px solid rgba(34,211,238,0.2)', flexShrink: 0 }}>
-            {/* Inline Code SVG with Fixed Width/Height */}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="16 18 22 12 16 6" />
               <polyline points="8 6 2 12 8 18" />
             </svg>
           </div>
         </div>
 
-        {/* Description */}
-        <p style={{ fontSize: '13px', color: '#94a3b8', lineHeight: 1.6, margin: '0 0 20px 0', fontWeight: '400' }}>
-          {description}
+        {/* Slower, Hacker-Green Letter Reveal Animation on Hover */}
+        <p className="text-xs text-slate-400 leading-relaxed font-normal mb-6 flex flex-wrap">
+          {descString.split('').map((char, idx) => (
+            <motion.span
+              key={idx}
+              initial={{ color: '#94a3b8', y: 0 }}
+              animate={isHovered ? { color: ['#94a3b8', '#22dc4a', '#94a3b8'], y: [0, -1.5, 0] } : { color: '#94a3b8', y: 0 }}
+              transition={{ duration: 0.8, delay: idx * 0.015, ease: 'easeInOut' }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </motion.span>
+          ))}
         </p>
       </div>
 
-      <div>
-        {/* Tag Pill Badges */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+      <div className="relative z-10">
+        <div className="flex flex-wrap gap-1.5 mb-5">
           {tags?.map((tag, idx) => {
-            // Safely extract string label from string OR object [{ name: 'React', ... }]
             const tagName = typeof tag === 'object' ? (tag.name || tag.label || 'Tech') : tag;
             return (
               <span
                 key={idx}
-                style={{
-                  padding: '3px 10px',
-                  fontSize: '11px',
-                  fontWeight: '500',
-                  color: '#67e8f9',
-                  backgroundColor: 'rgba(34, 211, 238, 0.1)',
-                  border: '1px solid rgba(34, 211, 238, 0.2)',
-                  borderRadius: '9999px',
-                }}
+                className="px-2.5 py-0.5 text-[11px] font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 rounded-full"
               >
                 {tagName}
               </span>
@@ -67,18 +83,14 @@ export default function Card({ title, description, tags, links }) {
           })}
         </div>
 
-        {/* Card Footer Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <div className="flex items-center gap-4 pt-4 border-t border-slate-800/80">
           {links?.code && (
             <a
               href={links.code}
               target="_blank"
               rel="noreferrer"
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: '500', color: '#cbd5e1', textDecoration: 'none' }}
+              className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-white transition-colors"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
               Code
             </a>
           )}
@@ -87,13 +99,8 @@ export default function Card({ title, description, tags, links }) {
               href={links.live}
               target="_blank"
               rel="noreferrer"
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: '500', color: '#22d3ee', textDecoration: 'none' }}
+              className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
               Live Demo
             </a>
           )}

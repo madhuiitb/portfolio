@@ -2,35 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-dark: #090d16;
-  --card-bg: rgba(15, 23, 42, 0.65);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --accent-cyan: #22d3ee;
-  --accent-indigo: #6366f1;
+@layer base {
+  body {
+    @apply bg-[#090d16] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
 }
 
-body {
-  background-color: var(--bg-dark);
-  color: #f8fafc;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  overflow-x: hidden;
-}
-
-/* Custom horizontal scrollbar styling */
+/* Smooth Horizontal Scrollbar for Cards */
 .horizontal-scroll-container::-webkit-scrollbar {
   height: 6px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.4);
+  background: rgba(34, 211, 238, 0.25);
   border-radius: 9999px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 211, 238, 0.7);
+  background: rgba(34, 211, 238, 0.6);
 }
