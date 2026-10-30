@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const NAV_ITEMS = [
   { label: 'Home', id: 'top' },
-  { label: 'About', id: 'about' },
+  { label: 'Experience', id: 'about' },
   { label: 'AlgoJS', id: 'algojs' },
   { label: 'Projects', id: 'projects' },
   { label: 'MachineCoding', id: 'machinecoding' },

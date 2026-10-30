@@ -16,12 +16,12 @@ export const ICONS = {
 
 
 export const SKILLS = [
-    { name: "React.js", years: 6, percent: 95 },
+    { name: "React.js", years: 7, percent: 95 },
     { name: "Next.js", years: 2, percent: 70 },
     { name: "React Native", years: 1, percent: 55 },
-    { name: "JavaScript", years: 6, percent: 90 },
-    { name: "Typescript", years: 1, percent: 20 },
-    { name: "CSS / HTML", years: 6, percent: 90 },
+    { name: "JavaScript", years: 7, percent: 90 },
+    { name: "Typescript", years: 3, percent: 20 },
+    { name: "CSS / HTML", years: 7, percent: 90 },
     { name: "Node.js", years: 1, percent: 35 },
     { name: "REST API", years: 4, percent: 70 },
 ];

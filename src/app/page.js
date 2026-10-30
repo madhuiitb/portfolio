@@ -10,6 +10,7 @@ import GalaxyBackground from '@/components/GalaxyBackground';
 import ContactSection from '@/components/ContactSection';
 import { PROJECT_DETAILS } from '../lib/constants';
 import styles from './page.module.css';
+import ExperienceSection from '@/components/ExperienceSection';
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,7 +40,7 @@ export default function Home() {
       />
 
       {/* 1. About / Hero Section */}
-      <div id="about" className="pt-16">
+      <div id="" className="pt-16">
         <HeroSection />
       </div>
 
@@ -117,6 +118,10 @@ export default function Home() {
             </svg>
           </button>
         </div>
+      </section>
+
+  <section id="about" className="pt-16">
+        <ExperienceSection />
       </section>
 
       {/* 3. AlgoJS Coming Soon Section */}
